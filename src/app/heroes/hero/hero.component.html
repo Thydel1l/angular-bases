@@ -1,0 +1,25 @@
+<h1>HEROES</h1>
+<dl>
+  <td> Nombre: </td>
+  <dd> {{name}}  </dd>
+  <td> Edad: </td>
+  <dd> {{age}} </dd>
+  <td> Metodo: </td>
+  <dd> Metodo </dd>
+  <td> Capitalizado: </td>
+  <dd> Capitalizado </dd>
+</dl>
+<!-- ngif nos ayudara a mostrar el boton si y solo si se cumple la condicion definida en el boton  -->
+<button  *ngIf="age !== 45" (click)="changedAgeN()" class="btn btn-primary mx-2 mt-2">
+  Cambiar Edad
+</button>
+<button *ngIf="name !== 'Spiderman'" (click)="changedHero('Spiderman')" class="btn btn-primary mx-2 mt-2">
+  Cambiar Nombre
+</button>
+<button (click)="resetForm()" class="btn btn-primary mx-2 mt-2">Resetear</button>
+<!-- <hr>
+<p> {{getMeDescription()}}</p>
+<hr>
+<p>{{capitalizedName}}</p>
+<hr>
+ -->
